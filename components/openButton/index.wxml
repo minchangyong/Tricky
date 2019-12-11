@@ -1,0 +1,1 @@
+<button open-type="getUserInfo" hover-class="none" bindgetuserinfo="queryUserInfo" >{{buttonName}}</button>

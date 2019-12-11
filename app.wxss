@@ -1,0 +1,31 @@
+/**app.wxss**/
+view {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  display: block;
+  overflow:auto;
+}
+
+image {
+  width: 100%;
+  display:inline-block;
+}
+
+button {
+   background-color: transparent;
+   padding: 0;
+   margin: 0;
+   position: static;
+   border: 0;
+   border-radius: 0;
+   color: transparent;
+}
+button::after {
+  content: '';
+  width: 0;
+  height: 0;
+  -webkit-transform:scale(1);
+  transform:scale(1);
+  display: none;
+  background: transparent;
+}

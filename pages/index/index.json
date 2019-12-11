@@ -1,0 +1,9 @@
+{
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#deb9be",
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "我们结婚啦",
+  "usingComponents": {
+    "open-button": "/components/openButton/index"
+  }
+}

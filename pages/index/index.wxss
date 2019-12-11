@@ -1,0 +1,192 @@
+.homepage {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  background: #f5ced3;
+}
+
+.mp3music {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 40rpx;
+  right: 30rpx;
+  z-index: 9999;
+}
+
+.container {
+  width: 100%;
+  position: absolute;
+  min-height: 100vh;
+  background: #f5ced3;
+  top: 0;
+  left: 0;
+}
+
+.createBack {
+  width: 100%;
+  float: left;
+}
+
+.userName {
+  width: 350rpx;
+  height: 83rpx;
+  line-height: 90rpx;
+  float: left;
+  margin-left: 194rpx;
+  margin-top: -128.5%;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.updateImage {
+  width: 344rpx;
+  height: 356rpx;
+  float: left;
+  margin-top: -90%;
+  margin-left: 214rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.object {
+  width: 350rpx;
+  height: 83rpx;
+  line-height: 90rpx;
+  float: left;
+  margin-left: 194rpx;
+  margin-top: -111%;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.checklast {
+  width: 120rpx;
+  height: 60rpx;
+  float: right;
+  margin-top: -108%;
+  margin-right: 70rpx;
+}
+
+.setAvatarUrl {
+  width: 356rpx;
+  height: 356rpx;
+}
+
+.updataBtn {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150rpx;
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  left: 50%;
+  font-size: 28rpx;
+  top: 50%;
+  margin-left: -75rpx;
+  margin-top: -75rpx;
+}
+
+.surecreate {
+  width: 400rpx;
+  margin-left: 175rpx;
+  float: left;
+  margin-top: -36%;
+}
+
+.setStart {
+  width: 350rpx;
+  height: 350rpx;
+  float: left;
+  margin-top: -115%;
+  margin-left: 215rpx;
+  position: relative;
+  z-index: 99;
+  opacity: 0;
+}
+.setStart button{
+  width: 350rpx;
+  height: 350rpx;
+}
+
+.showDialog {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.dialog-back {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 888;
+}
+
+.dialog-content {
+  width: 600rpx;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -300rpx;
+  margin-top: -540rpx;
+  z-index: 999;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+
+.content-back {
+  width: 550rpx;
+  float: left;
+  margin-left: 25rpx;
+  border-radius: 12rpx;
+}
+
+.shareforyou {
+  width: 260rpx;
+  float: left;
+  height: 96rpx;
+  background: url(https://qiniu-image.qtshe.com/20180816shareforyou.png) no-repeat center center;
+  background-size: 100% 100%;
+  margin-top: 32rpx;
+}
+
+.save-photo {
+  width: 260rpx;
+  height: 96rpx;
+  float: right;
+  background: url(https://qiniu-image.qtshe.com/20180816savephoto.png) no-repeat center center;
+  background-size: 100% 100%;
+  margin-top: 32rpx;
+}
+
+.merryName {
+  width: 100%;
+  float: left;
+  font-size: 26rpx;
+  color: #FFF;
+  text-align: center;
+  margin-top: -30.5%;
+}
+
+.borders {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  margin-left: 225rpx;
+  background: #FFF;
+}
+
+.qtshe-code {
+  width: 100rpx;
+  height: 100rpx;
+  float: right;
+  margin-top: -22%;
+  margin-right: 55rpx;
+}

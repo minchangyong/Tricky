@@ -1,0 +1,33 @@
+<image mode="widthFix" src="https://qiniu-image.qtshe.com/20180817openmusic.png" class="mp3music" wx:if="{{isOpenMusic}}" bindtap="closeMucic" />
+<image mode="widthFix" src="https://qiniu-image.qtshe.com/20180817closemusic.png" class="mp3music" wx:else bindtap="openMusic" />
+<view class="homepage" animation="{{animationData}}">
+  <image mode="widthFix" src="https://qiniu-image.qtshe.com/20180823wedding.gif" bindtap=""  />
+  <button class="setStart" wx:if="{{hasOpenId}}" bindtap="rotateAndScale" data-ptpid="63af-13c1-92a8-7f43"></button>
+  <view class="setStart" wx:else>
+    <open-button open-type="getUserInfo" bind:initData="rotateAndScale"></open-button>
+  </view>
+</view>
+
+<view class="container" animation="{{routeData}}">
+  <image mode="widthFix" src="https://qiniu-image.qtshe.com/20180821maked.png" class="createBack" />
+  <input type="text" placeholder="请输入您的姓名" placeholder-style="color: #CCC;" class="userName" value="{{userName}}" bindinput="getUserName" />
+  <input type="text" placeholder="请输入Ta的姓名" placeholder-style="color: #CCC;" class="object" value="{{myCpName}}" bindinput="getObject" />
+  <view class="checklast" bindtap="getRandomName"></view>
+  <view class="updateImage">
+    <image mode="widthFix" src="{{avatarUrl}}" class="setAvatarUrl" wx:if="{{!isUpload}}" bindtap="chooseImage" />
+    <image src="{{avatarUrl}}" class="my-image" wx:else bindtap="showActionSheet" />
+    <view class="updataBtn" wx:if="{{!isUpload}}" bindtap="chooseImage" >上传图片</view>
+  </view>
+  <image mode="widthFix" src="https://qiniu-image.qtshe.com/20180813surecreat.png" class="surecreate" bindtap="creatMyPic" />
+</view>
+
+<view class="showDialog" wx:if="{{isPhotoModel}}" catchtouchmove="preventTouchMove">
+  <view class="dialog-back" bindtap="closeModel"></view>
+  <view class="dialog-content">
+    <image mode="widthFix" src="{{qtsheBackground}}" class="content-back" />
+    <view class="merryName">{{cpName}}</view>
+    <image mode="widthFix" src="{{qtsheXcxCode}}" class="qtshe-code" />
+    <button open-type="share" class="shareforyou" />
+    <button class="save-photo" bindtap="showSaveModel" />
+  </view>
+</view>
