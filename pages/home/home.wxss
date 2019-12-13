@@ -1,8 +1,238 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+.container-index {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background: #F0F0F0;
+  position: relative;
+  overflow: hidden;
 }
-.log-item {
-  margin: 10rpx;
+
+.mp3music {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 40rpx;
+  right: 30rpx;
+  z-index:9999;
+}
+
+.container-index .backimage {
+  width: 100%;
+  float: left;
+}
+
+.container-detail {
+  width: 100%;
+  position: absolute;
+  min-height: 100vh;
+  background: #F0F0F0;
+  top: 0;
+  left: 0;
+  padding-bottom: 64rpx;
+}
+
+.userImage {
+  width: 410rpx;
+  height: 410rpx;
+  float: left;
+  margin: -147% 0 0 166rpx;
+  border: 4rpx solid #000;
+}
+
+.bubble {
+  width: 190rpx;
+  float: left;
+  margin-top: -115%;
+  margin-left: 40rpx;
+}
+
+.cloud {
+  width: 180rpx;
+  float: right;
+  margin-top: -140%;
+  margin-right: 40rpx;
+}
+
+.lie-tips {
+  width: 100%;
+  text-align: center;
+  background: #a84200;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #FFF;
+  font-size: 28rpx;
+  float: left;
+  margin-top: -91%;
+}
+
+.scroll-view {
+  width: 100%;
+  padding: 0 48rpx;
+  background: #f0f0f0;
+  height: 352rpx;
+  float: left;
+  margin-top: -75%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.scroll-box {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.scrollList {
+  width: 100rpx;
+  width: 100rpx;
+  flex: 0 0 20%;
+  margin-top: 24rpx;
+  text-align: center;
+}
+
+.scrollList image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.scrollList text {
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 24rpx;
+  display: block;
+}
+
+.myselfdo {
+  width: 350rpx;
+  margin-left: 200rpx;
+  float: left;
+  margin-top: -15%;
+}
+
+.setStart {
+  width: 300rpx;
+  height: 300rpx;
+  float: left;
+  margin-top: -106%;
+  margin-left: 225rpx;
+  position: relative;
+  z-index: 99;
+  opacity: 0;
+}
+
+.cpName {
+  width: 100%;
+  float: left;
+  color: #FFF;
+  font-size: 28rpx;
+  margin-top: -24.5%;
+  text-align: center;
+}
+
+.downBtn {
+  width: 100%;
+  float: left;
+  margin-top: -15%;
+  position: relative;
+  overflow: hidden;
+  padding: 0 82rpx;
+}
+
+.shareForyou {
+  width: 250rpx;
+  height: 82rpx;
+  background: url('https://qiniu-image.qtshe.com/20180816shareit.png') no-repeat center center;
+  background-size: 100% 100%;
+  float: left;
+}
+
+.saveThisbtn {
+  width: 250rpx;
+  height: 82rpx;
+  background: url('https://qiniu-image.qtshe.com/20180823creatImg.png') no-repeat center center;
+  background-size: 100% 100%;
+  float: right;
+}
+
+.showDialog {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.dialog-back {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 888;
+}
+
+.dialog-content {
+  width: 600rpx;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -300rpx;
+  margin-top: -540rpx;
+  z-index: 999;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+
+.content-back {
+  width: 550rpx;
+  float: left;
+  margin-left: 25rpx;
+  border-radius: 12rpx;
+}
+.qtshe-code {
+  width: 100rpx;
+  height: 100rpx;
+  float: right;
+  margin-top: -22%;
+  margin-right: 55rpx;
+}
+
+.shareforme {
+  width: 260rpx;
+  float: left;
+  height: 96rpx;
+  background: url(https://qiniu-image.qtshe.com/20180816shareforyou.png) no-repeat center center;
+  background-size: 100% 100%;
+  margin-top: 32rpx;
+}
+
+.save-photo {
+  width: 260rpx;
+  height: 96rpx;
+  float: right;
+  background: url(https://qiniu-image.qtshe.com/20180816savephoto.png) no-repeat center center;
+  background-size: 100% 100%;
+  margin-top: 32rpx;
+}
+
+.merryName {
+  width: 100%;
+  float: left;
+  font-size: 26rpx;
+  color: #FFF;
+  text-align: center;
+  margin-top: -30.5%;
+}
+
+.borders {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  margin-left: 225rpx;
+  background: #FFF;
 }

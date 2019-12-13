@@ -1,6 +1,46 @@
-<!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<image mode="widthFix" src="https://qiniu-image.qtshe.com/20180817openmusic.png" class="mp3music ptp_exposure" wx:if="{{isOpenMusic}}" bindtap="closeMucic" data-ptpid="64a1-1239-a8f4-453b" />
+<image mode="widthFix" src="https://qiniu-image.qtshe.com/20180817closemusic.png" class="mp3music ptp_exposure" wx:else bindtap="openMusic" data-ptpid="a0e8-1fb9-ab2c-9ecf" />
+<view class="container-index" animation="{{animationData}}">
+  <image mode="widthFix" src="https://qiniu-image.qtshe.com/20180816index.gif" class="backimage" />
+  <view class="cpName">{{cpName}}</view>
+  <button class="setStart ptp_exposure" wx:if="{{hasOpenId}}" bindtap="rotateAndScale" data-ptpid="703e-1ff0-9c5d-5bfb"></button>
+  <view class="setStart" wx:else>
+    <open-button open-type="getUserInfo" bind:initData="rotateAndScale"></open-button>
+  </view>
+</view>
+
+<view class="container-detail" animation="{{routeData}}">
+  <image mode="widthFix" src="https://qiniu-image.qtshe.com/20180813lied.png" style="float: left;" />
+  <image src="{{image}}" class="userImage" />
+  <image mode="widthFix" src="https://qiniu-image.qtshe.com/20180813qipao.png" class="bubble" />
+  <image mode="widthFix" src="https://qiniu-image.qtshe.com/20180813cloud.png" class="cloud" />
+  <view class="lie-tips">有 {{totalCount}} 个人偷偷关 (xi) 心 (huan) {{userName}}</view>
+  <scroll-view scroll-y class="scroll-view" bindscrolltolower="scrolltolower">
+    <view class="scroll-box">
+      <view class="scrollList" wx:for="{{results}}" wx:key="{{index}}">
+        <image src="{{item.headImg}}" />
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="downBtn" wx:if="{{isSelf}}">
+    <button class="saveThisbtn ptp_exposure" bindtap="showPhotoModel" data-ptpid="c664-1c49-be98-5ad2" />
+    <button open-type="share" class="shareForyou" />
+  </view>
+  <image mode="widthFix" src="https://qiniu-image.qtshe.com/20180813wantto.png" class="myselfdo ptp_exposure" bindtap="skipToCreate" wx:else data-ptpid="a2af-191e-91dc-fea1" />
+</view>
+
+<view class="showDialog" wx:if="{{isPhotoModel}}" catchtouchmove="preventTouchMove">
+  <view class="dialog-back ptp_exposure" bindtap="closeModel" data-ptpid="37a7-1389-9378-d927"></view>
+  <view class="dialog-content">
+    <image mode="widthFix" src="{{qtsheBackground}}" class="content-back" />
+    <view class="merryName">{{cpName}}</view>
+    <image mode="widthFix" src="{{qtsheXcxCode}}" class="qtshe-code" />
+    <button open-type="share" class="shareforme" />
+    <button class="save-photo ptp_exposure" bindtap="showSaveModel" data-ptpid="6fe5-12ca-8060-20ac" />
+  </view>
+</view>
+
+<view class="canvasSave" wx:if="{{isCanvas}}">
+  <canvas canvas-id="mycanvas" style="width: 320px; height: 568px; margin:0 auto;" />
 </view>
