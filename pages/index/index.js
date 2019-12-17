@@ -47,6 +47,7 @@ Page({
     })
   },
   onLoad(options) {
+    this.createQrCode()
     this.scaleO()
     this.audioGreat = wx.createInnerAudioContext()
     this.audioGreat.autoplay = true
@@ -171,8 +172,7 @@ Page({
         if (res.success) {
           this.setData({
             weddingId: res.data.weddingId,
-            shareUrl: `/pages/home/home?weddingId=${res.data.weddingId}`,
-            isPhotoModel: true
+            shareUrl: `/pages/home/home?weddingId=${res.data.weddingId}`
           })
         } else {
           wx.showToast({
@@ -182,6 +182,29 @@ Page({
         }
       })
     }
+  },
+  createQrCode() {
+    wx.cloud.callFunction({
+      name: 'getqr',
+      data: {
+        page: 'pages/demo/demo',
+        scene: 'id=6',
+      }
+    }).then(res => {
+      console.log(res.result);
+      if (res.result.status == 0) {
+        _this.setData({
+          qr_url: res.result.tempFileURL
+        })
+      } else {
+        wx.showToast({
+          icon: 'none',
+          title: '生成小程序码失败',
+        })
+      }
+    }).catch(err => {
+      console.log(err);
+    })
   },
   chooseImage() {
     app.uploadFile(this.getImage)
